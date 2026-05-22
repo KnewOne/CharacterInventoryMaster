@@ -12,6 +12,6 @@
   "requiredOnClient": true,
   "requiredOnServer": false,
   "dependencies": {
-    "survival": ""
+    "survival": "1.21.0"
   }
 }
