@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using System;
 using System.Linq;
 using CharacterInventoryMaster.Config;
@@ -31,6 +31,7 @@ public class CharacterInventoryMaster : ModSystem {
         if (api.ModLoader.IsModEnabled("configlib")) {
             SubscribeToConfigChange(api);
         }
+        harmony.PatchAll(); // Literally everything changes this, so might as well // Moved this outside only starting when configlib applies a config so the mod actually applies -Ender
     }
 
     public override void Dispose() {
@@ -49,8 +50,7 @@ public class CharacterInventoryMaster : ModSystem {
                 return;
 
             setting.AssignSettingValue(ModConfig.Instance);
-            harmony.UnpatchAll(Mod.Info.ModID);
-            harmony.PatchAll(); // Literally everything changes this, so might as well
+            //harmony.UnpatchAll(Mod.Info.ModID); //is this needed? idk i havent used harmony before -Ender
         };
     }
 
