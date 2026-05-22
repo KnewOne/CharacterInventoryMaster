@@ -2,9 +2,12 @@
   "type": "code",
   "name": "Character Inventory Master",
   "modid": "characterinventorymaster",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Character Inventory menu configuration",
   "authors": [ "KnewOne" ],
+  "contributors": [
+    "EnderMelody"
+  ],
   "side": "Universal",
   "requiredOnClient": true,
   "requiredOnServer": false,
