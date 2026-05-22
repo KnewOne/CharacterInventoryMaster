@@ -12,6 +12,6 @@
   "requiredOnClient": true,
   "requiredOnServer": false,
   "dependencies": {
-    "survival": "1.21.0"
+    "game": "1.21.0"
   }
 }
